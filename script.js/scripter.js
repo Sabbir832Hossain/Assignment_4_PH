@@ -65,3 +65,90 @@ function togglingStyle(id) {
   }
 }
 togglingStyle('all-filtering-btn');
+
+filterSection.addEventListener('click', handleCard);
+allCardsSection.addEventListener('click', handleCard);
+
+function handleCard(event) {
+  const successBtn = event.target.closest('.success-btn-of-card');
+  const warningBtn = event.target.closest('.warning-btn-of-card');
+  const deleteBtn = event.target.closest('.delete-btn-of-card');
+
+  if (successBtn) {
+    const parentNode = event.target.closest('.card-item');
+
+    const title = parentNode.querySelector('.title-of-card').innerText;
+    const skill = parentNode.querySelector('.skill-of-card').innerText;
+    const salary = parentNode.querySelector('.salary-of-card').innerText;
+    const status = parentNode.querySelector('.status-of-card').innerText;
+    const description = parentNode.querySelector(
+      '.description-of-card',
+    ).innerText;
+
+    const cardInfo = {
+      title,
+      skill,
+      salary,
+      status: 'Interview',
+      description,
+    };
+
+    const existInterview = interviewList.find(
+      item => item.title === cardInfo.title,
+    );
+
+    if (!existInterview) {
+      interviewList.push(cardInfo);
+    }
+    rejectedList = rejectedList.filter(item => item.title != cardInfo.title);
+    if (currentStatus === 'rejected-filtering-btn') {
+      renderRejected();
+    }
+    calculate();
+  } else if (warningBtn) {
+    const parentNode = event.target.closest('.card-item');
+
+    const title = parentNode.querySelector('.title-of-card').innerText;
+    const skill = parentNode.querySelector('.skill-of-card').innerText;
+    const salary = parentNode.querySelector('.salary-of-card').innerText;
+    const status = parentNode.querySelector('.status-of-card').innerText;
+    const description = parentNode.querySelector(
+      '.description-of-card',
+    ).innerText;
+
+    const cardInfo = {
+      title,
+      skill,
+      salary,
+      status: 'Rejected',
+      description,
+    };
+
+    const existWarning = rejectedList.find(
+      item => item.title === cardInfo.title,
+    );
+
+    if (!existWarning) {
+      rejectedList.push(cardInfo);
+    }
+
+    interviewList = interviewList.filter(item => item.title != cardInfo.title);
+    if (currentStatus === 'interview-filtering-btn') {
+      renderInterview();
+    }
+    calculate();
+  } else if (deleteBtn) {
+    const parentNode = event.target.closest('.card-item');
+    const parent = parentNode.parentNode;
+    console.log(parent);
+    const title = parentNode.querySelector('.title-of-card').innerText;
+    parentNode.remove();
+    if (parent.children.length === 0) {
+      emptyInfo.classList.remove('hidden');
+    }
+    interviewList = interviewList.filter(item => item.title !== title);
+    rejectedList = rejectedList.filter(item => item.title !== title);
+
+    calculate();
+  }
+}
