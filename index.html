@@ -31,5 +31,28 @@
       </div>
     </div>
   </header>
+  <main class="max-w-[80%] mx-auto space-y-6 mt-[40px]">
+    <div class="flex justify-between">
+      <h2 class="font-semibold text-[20px] ">Available Jobs</h2>
+      <p class="text-gray text-[16px]"><span id="availableJobs" class="">0</span> Jobs</p>
+    </div>
+    <div class="flex gap-2">
+
+      <button onclick="togglingStyle('all-filtering-btn')" id="all-filtering-btn"
+        class="px-4 py-2 bg-gray-300 rounded font-semibold   text-black">All</button>
+      <button onclick="togglingStyle('interview-filtering-btn')" id="interview-filtering-btn"
+        class="px-4 py-2 bg-gray-300 rounded font-semibold text-[12px]text-black">Interview</button>
+      <button onclick="togglingStyle('rejected-filtering-btn')" id="rejected-filtering-btn"
+        class="px-4 py-2 bg-gray-300 rounded font-semibold text-[12px]text-black">Rejected</button>
+    </div>
+    <div id="filter-section" class="card-container space-y-6 hidden">
+
+    </div>
+  </main>
+
+
+
+
+
   <script src="./script.js/scripter.js"></script>
 </body>
