@@ -27,3 +27,41 @@ function calculate() {
   rejectedCount.innerText = rejectedList.length;
 }
 calculate();
+
+function togglingStyle(id) {
+  allFilteringBtn.classList.add('bg-base-200', 'text-black');
+  interviewFilteringBtn.classList.add('bg-base-200', 'text-black');
+  rejectedFilteringBtn.classList.add('bg-base-200', 'text-black');
+
+  allFilteringBtn.classList.remove('bg-blue-500', 'text-white');
+  interviewFilteringBtn.classList.remove('bg-blue-500', 'text-white');
+  rejectedFilteringBtn.classList.remove('bg-blue-500', 'text-white');
+
+  const clickedBtn = document.getElementById(id);
+
+  clickedBtn.classList.remove('bg-base-200', 'text-black');
+  clickedBtn.classList.add('bg-blue-500', 'text-white');
+
+  currentStatus = id;
+  emptyInfo.classList.add('hidden');
+  if (currentStatus === 'interview-filtering-btn') {
+    allCardsSection.classList.add('hidden');
+    filterSection.classList.remove('hidden');
+    renderInterview();
+    if (interviewList.length === 0) {
+      emptyInfo.classList.remove('hidden');
+    }
+  } else if (currentStatus === 'all-filtering-btn') {
+    allCardsSection.classList.remove('hidden');
+    filterSection.classList.add('hidden');
+    emptyInfo.classList.add('hidden');
+  } else if (currentStatus === 'rejected-filtering-btn') {
+    allCardsSection.classList.add('hidden');
+    filterSection.classList.remove('hidden');
+    renderRejected();
+    if (rejectedList.length === 0) {
+      emptyInfo.classList.remove('hidden');
+    }
+  }
+}
+togglingStyle('all-filtering-btn');
