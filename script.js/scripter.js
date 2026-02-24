@@ -152,3 +152,39 @@ function handleCard(event) {
     calculate();
   }
 }
+
+function renderInterview() {
+  if (interviewList.length === 0) {
+    emptyInfo.classList.remove('hidden');
+  }
+
+  filterSection.innerHTML = '';
+  for (const interview of interviewList) {
+    let div = document.createElement('div');
+    div.className = 'card-item flex justify-between border p-[30px]';
+    div.innerHTML = `
+                <div class="space-y-2">
+                    <div class="space-y-2">
+                        <h2 class="title-of-card font-bold">${interview.title}</h2>
+                        <p class="skill-of-card">${interview.skill}</p>
+                        <p class="salary-of-card">${interview.salary}</p>
+                    </div>
+                    <div>
+                        <p class="status-of-card font-bold btn px-3 py-1 bg-green-300">${interview.status}</p>
+                    </div>
+                    <p class="description-of-card">Build cross-platform mobile applications using React Native. Work on products used by millions of
+                        users worldwide.</p>
+                    <div>
+                        <button class="success-btn-of-card btn btn-active btn-info">Success</button>
+                        <button class="warning-btn-of-card btn btn-active btn-warning">Warning</button>
+                    </div>
+                </div>
+                <div class="">
+                    <button class="delete-btn-of-card btn rounded-full w-[30px] h-[30px] p-[24px]">
+                        <i class="fa-regular fa-trash-can delete-btn-of-card"></i>
+                    </button>
+                </div>
+    `;
+    filterSection.appendChild(div);
+  }
+}
