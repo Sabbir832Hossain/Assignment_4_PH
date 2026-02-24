@@ -165,18 +165,18 @@ function renderInterview() {
     div.innerHTML = `
                 <div class="space-y-2">
                     <div class="space-y-2">
-                        <h2 class="title-of-card font-bold">${interview.title}</h2>
-                        <p class="skill-of-card">${interview.skill}</p>
-                        <p class="salary-of-card">${interview.salary}</p>
+                        <h2 class="title-of-card font-semibold text-[18px]">${interview.title}</h2>
+                        <p class="skill-of-card text-[#777777]">${interview.skill}</p>
+                        <p class="salary-of-card text-[#777777]">${interview.salary}</p>
                     </div>
                     <div>
-                        <p class="status-of-card font-bold btn px-3 py-1 bg-green-300">${interview.status}</p>
+                        <p class="status-of-card font-medium text-black btn px-3 py-1 bg-green-300">${interview.status}</p>
                     </div>
-                    <p class="description-of-card">Build cross-platform mobile applications using React Native. Work on products used by millions of
+                    <p class="description-of-card text-[#777777]">Build cross-platform mobile applications using React Native. Work on products used by millions of
                         users worldwide.</p>
                     <div>
-                        <button class="success-btn-of-card btn btn-active btn-info">Success</button>
-                        <button class="warning-btn-of-card btn btn-active btn-warning">Warning</button>
+                        <button class="success-btn-of-card btn btn-outline btn-success">Interview</button>
+                        <button class="warning-btn-of-card btn btn-outline btn-error">Rejected</button>
                     </div>
                 </div>
                 <div class="">
@@ -201,18 +201,18 @@ function renderRejected() {
     div.innerHTML = `
                 <div class="space-y-2">
                     <div class="space-y-2">
-                        <h2 class="title-of-card font-bold">${rejected.title}</h2>
-                        <p class="skill-of-card">${rejected.skill}</p>
-                        <p class="salary-of-card">${rejected.salary}</p>
+                        <h2 class="title-of-card font-semibold text-[18px]">${rejected.title}</h2>
+                        <p class="skill-of-card text-[#777777]">${rejected.skill}</p>
+                        <p class="salary-of-card text-[#777777]">${rejected.salary}</p>
                     </div>
                     <div>
-                        <p class="status-of-card font-bold btn px-3 py-1 bg-red-300">${rejected.status}</p>
+                        <p class="status-of-card font-medium btn px-3 py-1 bg-red-300">${rejected.status}</p>
                     </div>
-                    <p class="description-of-card">Build cross-platform mobile applications using React Native. Work on products used by millions of
+                    <p class="description-of-card text-[#777777]">Build cross-platform mobile applications using React Native. Work on products used by millions of
                         users worldwide.</p>
                     <div>
-                        <button class="success-btn-of-card btn btn-active btn-info">Success</button>
-                        <button class="warning-btn-of-card btn btn-active btn-warning">Warning</button>
+                        <button class="success-btn-of-card btn btn-outline btn-success">Interview</button>
+                        <button class="warning-btn-of-card btn btn-outline btn-error">Warning</button>
                     </div>
                 </div>
                 <div class="">
