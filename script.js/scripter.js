@@ -19,3 +19,11 @@ const allCardsSection = document.getElementById('all-cards');
 let filterSection = document.getElementById('filter-section');
 
 const emptyInfo = document.getElementById('empty-info');
+
+function calculate() {
+  totalCount.innerText = allCardsSection.children.length;
+  availableJobs.innerText = allCardsSection.children.length;
+  interviewCount.innerText = interviewList.length;
+  rejectedCount.innerText = rejectedList.length;
+}
+calculate();
