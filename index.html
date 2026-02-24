@@ -12,8 +12,8 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body>
-  <header class="max-w-[80%] mx-auto space-y-6 md:sticky top-0 bg-base-200 z-20 p-3 border border-base-300">
+<body class="bg-base-300">
+  <header class="max-w-[80%] mx-auto space-y-6 md:sticky top-0  z-20 p-3 border border-base-300">
     <h1 class="text-3xl"> Job Application Tracker</h1>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-[60px]">
@@ -39,15 +39,224 @@
     <div class="flex gap-2">
 
       <button onclick="togglingStyle('all-filtering-btn')" id="all-filtering-btn"
-        class="px-4 py-2 bg-gray-300 rounded font-semibold   text-black">All</button>
+        class="px-4 py-2 bg-base-200 rounded font-semibold btn text-[12px] text-black">All</button>
       <button onclick="togglingStyle('interview-filtering-btn')" id="interview-filtering-btn"
-        class="px-4 py-2 bg-gray-300 rounded font-semibold text-[12px]text-black">Interview</button>
+        class="px-4 py-2 bg-base-200 rounded font-semibold text-[12px] btn text-black">Interview</button>
       <button onclick="togglingStyle('rejected-filtering-btn')" id="rejected-filtering-btn"
-        class="px-4 py-2 bg-gray-300 rounded font-semibold text-[12px]text-black">Rejected</button>
+        class="px-4 py-2 bg-base-200 rounded font-semibold text-[12px] btn text-black">Rejected</button>
     </div>
     <div id="filter-section" class="card-container space-y-6 hidden">
 
     </div>
+
+
+    <div id="all-cards" class="card-container space-y-6">
+      <div class="card-item flex justify-between shadow bg-base-200 rounded-lg p-[30px]">
+        <div class="space-y-2">
+          <div class="space-y-2">
+            <h2 class="title-of-card font-semibold text-[18px]">Mobile First Corp</h2>
+            <p class="skill-of-card text-[#777777]">React Native Developer</p>
+            <p class="salary-of-card text-[#777777]">Remote • Full-time • $130,000 - $175,000</p>
+          </div>
+          <div>
+            <p class="status-of-card font-medium btn px-3 py-1 bg-base-200 ">NOT APPLIED</p>
+          </div>
+          <p class="description-of-card text-[#777777]">Build cross-platform mobile applications using React Native.
+            Work on
+            products used by millions of
+            users worldwide.</p>
+          <div>
+            <button class="success-btn-of-card btn  btn-outline btn-success">Interview</button>
+            <button class="warning-btn-of-card btn btn-outline btn-error">Rejected</button>
+          </div>
+        </div>
+        <div class="">
+          <button class="delete-btn-of-card btn rounded-full w-[30px] h-[30px] p-[24px]">
+            <i class="fa-regular fa-trash-can delete-btn-of-card"></i>
+          </button>
+        </div>
+      </div>
+      <div class="card-item flex justify-between shadow bg-base-200 rounded-lg p-[30px]">
+        <div class="space-y-2">
+          <div class="space-y-2">
+            <h2 class="title-of-card font-semibold text-[18px]">WebFlow Agency</h2>
+            <p class="skill-of-card text-[#777777]">Backend Developer</p>
+            <p class="salary-of-card text-[#777777]">Remote • Full-time • $140k</p>
+          </div>
+          <div>
+            <p class="status-of-card font-medium btn px-3 py-1 bg-base-200">NOT APPLIED</p>
+          </div>
+          <p class="description-of-card text-[#777777]">Build cross-platform mobile applications using React Native.
+            Work on
+            products used by millions of
+            users worldwide.</p>
+          <div>
+            <button class="success-btn-of-card btn  btn-outline btn-success">Interview</button>
+            <button class="warning-btn-of-card btn btn-outline btn-error">Rejected</button>
+          </div>
+        </div>
+        <div>
+          <button class="delete-btn-of-card btn rounded-full w-[30px] h-[30px] p-[24px]">
+            <i class="fa-regular fa-trash-can"></i>
+          </button>
+        </div>
+      </div>
+      <div class="card-item flex justify-between shadow bg-base-200 rounded-lg p-[30px]">
+        <div class="space-y-2">
+          <div class="space-y-2">
+            <h2 class="title-of-card font-semibold text-[18px]">DataViz Solutions</h2>
+            <p class="skill-of-card text-[#777777]">Full Stack Developer</p>
+            <p class="salary-of-card text-[#777777]">Remote • Full-time • $130,000 </p>
+          </div>
+          <div>
+            <p class="status-of-card font-medium btn px-3 py-1 bg-base-200">NOT APPLIED</p>
+          </div>
+          <p class="description-of-card text-[#777777]">Build cross-platform mobile applications using React Native.
+            Work on
+            products used by millions of
+            users worldwide.</p>
+          <div>
+            <button class="success-btn-of-card btn  btn-outline btn-success">Interview</button>
+            <button class="warning-btn-of-card btn btn-outline btn-error">Rejected</button>
+          </div>
+        </div>
+        <div>
+          <button class="delete-btn-of-card btn rounded-full w-[30px] h-[30px] p-[24px]">
+            <i class="fa-regular fa-trash-can"></i>
+          </button>
+        </div>
+      </div>
+      <div class="card-item flex justify-between shadow bg-base-200 rounded-lg p-[30px]">
+        <div class="space-y-2">
+          <div class="space-y-2">
+            <h2 class="title-of-card font-semibold text-[18px]">CloudFirst Inc</h2>
+            <p class="skill-of-card text-[#777777]">React Developer</p>
+            <p class="salary-of-card text-[#777777]">Remote • Full-time • $175,000</p>
+          </div>
+          <div>
+            <p class="status-of-card font-medium btn px-3 py-1 bg-base-200">NOT APPLIED</p>
+          </div>
+          <p class="description-of-card text-[#777777]">Build cross-platform mobile applications using React Native.
+            Work on
+            products used by millions of
+            users worldwide.</p>
+          <div>
+            <button class="success-btn-of-card btn  btn-outline btn-success">Interview</button>
+            <button class="warning-btn-of-card btn btn-outline btn-error">Rejected</button>
+          </div>
+        </div>
+        <div>
+          <button class="delete-btn-of-card btn rounded-full w-[30px] h-[30px] p-[24px]">
+            <i class="fa-regular fa-trash-can"></i>
+          </button>
+        </div>
+      </div>
+      <div class="card-item flex justify-between shadow bg-base-200 rounded-lg p-[30px]">
+        <div class="space-y-2">
+          <div class="space-y-2">
+            <h2 class="title-of-card font-semibold text-[18px]">Innovation Labs</h2>
+            <p class="skill-of-card text-[#777777]">UI Developer</p>
+            <p class="salary-of-card text-[#777777]">Remote • Full-time • $1350</p>
+          </div>
+          <div>
+            <p class="status-of-card font-medium btn px-3 py-1 bg-base-200">NOT APPLIED</p>
+          </div>
+          <p class="description-of-card text-[#777777]">Build cross-platform mobile applications using React Native.
+            Work on
+            products used by millions of
+            users worldwide.</p>
+          <div>
+            <button class="success-btn-of-card btn  btn-outline btn-success">Interview</button>
+            <button class="warning-btn-of-card btn btn-outline btn-error">Rejected</button>
+          </div>
+        </div>
+        <div>
+          <button class="delete-btn-of-card btn rounded-full w-[30px] h-[30px] p-[24px]">
+            <i class="fa-regular fa-trash-can"></i>
+          </button>
+        </div>
+      </div>
+      <div class="card-item flex justify-between shadow bg-base-200 rounded-lg p-[30px]">
+        <div class="space-y-2">
+          <div class="space-y-2">
+            <h2 class="title-of-card font-semibold text-[18px]">MegaCorp Solutions</h2>
+            <p class="skill-of-card text-[#777777]">iOS Developer</p>
+            <p class="salary-of-card text-[#777777]">Remote • Full-time • $150k</p>
+          </div>
+          <div>
+            <p class="status-of-card font-medium btn px-3 py-1 bg-base-200">NOT APPLIED</p>
+          </div>
+          <p class="description-of-card text-[#777777]">Build cross-platform mobile applications using React Native.
+            Work on
+            products used by millions of
+            users worldwide.</p>
+          <div>
+            <button class="success-btn-of-card btn  btn-outline btn-success">Interview</button>
+            <button class="warning-btn-of-card btn btn-outline btn-error">Rejected</button>
+          </div>
+        </div>
+        <div>
+          <button class="delete-btn-of-card btn rounded-full w-[30px] h-[30px] p-[24px]">
+            <i class="fa-regular fa-trash-can"></i>
+          </button>
+        </div>
+      </div>
+      <div class="card-item flex justify-between shadow bg-base-200 rounded-lg p-[30px]">
+        <div class="space-y-2">
+          <div class="space-y-2">
+            <h2 class="title-of-card font-semibold text-[18px]">StartupXYZ</h2>
+            <p class="skill-of-card text-[#777777]">Software Engineer</p>
+            <p class="salary-of-card text-[#777777]">Remote • Full-time • $15,000</p>
+          </div>
+          <div>
+            <p class="status-of-card font-medium btn px-3 py-1 bg-base-200">NOT APPLIED</p>
+          </div>
+          <p class="description-of-card text-[#777777]">Build cross-platform mobile applications using React Native.
+            Work on
+            products used by millions of
+            users worldwide.</p>
+          <div>
+            <button class="success-btn-of-card btn  btn-outline btn-success">Interview</button>
+            <button class="warning-btn-of-card btn btn-outline btn-error">Rejected</button>
+          </div>
+        </div>
+        <div>
+          <button class="delete-btn-of-card btn rounded-full w-[30px] h-[30px] p-[24px]">
+            <i class="fa-regular fa-trash-can"></i>
+          </button>
+        </div>
+      </div>
+      <div class="card-item flex justify-between shadow bg-base-200 rounded-lg p-[30px]">
+        <div class="space-y-2 ">
+          <div class="space-y-2">
+            <h2 class="title-of-card font-semibold text-[18px]">TechCorp Industries</h2>
+            <p class="skill-of-card text-[#777777]">Mobile Developer</p>
+            <p class="salary-of-card text-[#777777]">Remote • Full-time • $130,000</p>
+          </div>
+          <div>
+            <p class="status-of-card font-medium btn px-3 py-1 bg-base-200">NOT APPLIED</p>
+          </div>
+          <p class="description-of-card text-[#777777]">Build cross-platform mobile applications using React Native.
+            Work on
+            products used by millions of
+            users worldwide.</p>
+          <div>
+            <button class="success-btn-of-card btn  btn-outline btn-success">Interview</button>
+            <button class="warning-btn-of-card btn btn-outline btn-error">Rejected</button>
+          </div>
+        </div>
+        <div>
+          <button class="delete-btn-of-card btn rounded-full w-[30px] h-[30px] p-[24px]">
+            <i class="fa-regular fa-trash-can"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
   </main>
 
 
