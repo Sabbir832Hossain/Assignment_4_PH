@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Application Tracker</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+  <header class="max-w-[80%] mx-auto space-y-6 md:sticky top-0 bg-base-200 z-20 p-3 border border-base-300">
+    <h1 class="text-3xl"> Job Application Tracker</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-[60px]">
+      <div class="card bg-base-200 text-black p-5 space-y-2 shadow">
+        <h2 class="card-title">Total</h2>
+        <p id="total" class="font-bold"><span class="text-black">0</span></p>
+      </div>
+      <div class="card bg-base-200 shadow  text-black p-5 space-y-2">
+        <h2 class="card-title">Interview</h2>
+        <p id="interviewCount" class="font-bold"><span class="text-green-500">0</span></p>
+      </div>
+      <div class="card bg-base-200 text-black shadow p-5 space-y-2">
+        <h2 class="card-title">Rejected</h2>
+        <p id="rejectedCount" class="font-bold"><span class="text-red-500">0</span></p>
+      </div>
+    </div>
+  </header>
+  <script src="./script.js/scripter.js"></script>
+</body>
